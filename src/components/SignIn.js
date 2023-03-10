@@ -19,7 +19,7 @@ const Signin = ()=> {
 const userSign = ()=>{
     signInWithEmailAndPassword(auth, email, pass).then(value =>{
         console.log("Successfully sign");
-        navigate("/");
+        navigate("/home");
     }).catch(err=>{
         console.log("Not Sign In");
     })
@@ -57,18 +57,18 @@ const userSign = ()=>{
         <div id="or">-OR-</div>
         <form className="FormHeading">
             <div className="formEmailHeading">
-                <label for="email"/><br/>
+                <label htmlFor="email"/><br/>
                 <input type="text" placeholder="Email Address" className="emailAdd" autocomplete="off" onChange={event =>setEmail(event.target.value)}/><br/>
             </div>
             <div className="formPasswordHeading">
-                <label for="password"/><br/>
+                <label htmlFor="password"/><br/>
                 <input type="password" placeholder="Password" className="passWord" autocomplete="off" id="id_password" onChange={event =>setPass(event.target.value)}/><i className="far fa-eye eye_btn" id="togglePassword"></i><br/>
             </div>
         </form>
        <button className="subThirdContainer">
          <div className="subThirdHeading" onClick={userSign}>Sign In Account</div>
          </button>
-        <div className="subFourthHeading">Don’t have an account?<span className="sign_up_pointer" onClick={navigate("/Signin")}> Sign Up</span></div>
+        <div className="subFourthHeading">Don’t have an account?<span className="sign_up_pointer"> Sign Up</span></div>
     </div>
     </>
   );

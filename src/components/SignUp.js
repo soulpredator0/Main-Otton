@@ -16,23 +16,22 @@ const navigate = useNavigate();
 const [email, setEmail] = useState("");
 const [name, setName] = useState("");
 const [pass, setPass] = useState("");
+const [disabledBtn, setDisabledBtn] = useState(false);
 
 const createUser = ()=>{
+    setDisabledBtn(true);
     createUserWithEmailAndPassword(auth, email, pass).then(value=>{
         set(ref(db, "userData/" + value.user.uid), {
             email: email,
             name: name,
             password: pass,
         });
-        navigate("/");
+        setDisabledBtn(false);
+        navigate("/home");
     }).catch(err=>{
         console.log(err);
     })
 }
-
-
-
-
   return (
 <>
     <div className="container">
@@ -46,39 +45,39 @@ const createUser = ()=>{
         <div className="subSecondHeading">Create A New Account</div>
         <div className="both_btn">
         <div className="google">
-            <button>
+            {/* <button> */}
                 <div className="logo_google">
                     <img src={image} alt="image" width="30px" height="30px"/>
                 </div>
                 <div className="googleParagraph">Sign in with Google</div>
-            </button>
+            {/* </button> */}
         </div>
         <div className="facebook">
-            <button>
+            {/* <button> */}
                 <div className="logo_facebook">
                     <img src={image1} alt="image" width="23px" height="23px"/>
                 </div>
                 <div className="facebookParagraph">Sign in with Facebook</div>
-            </button>
+            {/* </button> */}
         </div>
     </div>
         <div id="or">-OR-</div>
         <form className="FormHeading">
             <div className="formEmailHeading">
-                <label for="name"/><br/>
-                <input type="text" placeholder="Name" className="emailAdd" autocomplete="off" onChange={event=>{setName(event.target.value)}}/><br/>
+                <label htmlFor="name"/><br/>
+                <input type="text" placeholder="Name" className="emailAdd"  onChange={event=>{setName(event.target.value)}}/><br/>
             </div>
             <div className="formEmailHeading">
-                <label for="email"/><br/>
-                <input type="text" placeholder="Email Address" className="emailAdd" autocomplete="off" onChange={event=>{setEmail(event.target.value)}}/><br/>
+                <label htmlFor="email"/><br/>
+                <input type="text" placeholder="Email Address" className="emailAdd" onChange={event=>{setEmail(event.target.value)}}/><br/>
             </div>
             <div className="formPasswordHeading">
-                <label for="password"/><br/>
-                <input type="password" placeholder="Password" className="passWord" autocomplete="off" id="id_password" onChange={event=>{setPass(event.target.value)}}/><br/>
+                <label htmlFor="password"/><br/>
+                <input type="password" placeholder="Password" className="passWord" id="id_password" onChange={event=>{setPass(event.target.value)}}/><br/>
             </div>
         </form>
        <button className="subThirdContainer">
-         <div className="subThirdHeading" onClick={createUser}>Create Account</div>
+         <div className="subThirdHeading" onClick={createUser} disabled={disabledBtn}>Create Account</div>
          </button>
         <div className="subFourthHeading">Already have an account?<span className="sign_up_pointer">Sign In</span></div>
     </div>
