@@ -1,38 +1,345 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+    background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.firstHeading {
+    position: absolute;
+    width: 281px;
+    height: 70px;
+    left: 73px;
+    top: 189px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    line-height: 32px;
+    color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.secondHeading {
+    position: absolute;
+    width: 327px;
+    height: 97px;
+    left: 73px;
+    top: 257px;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 78px;
+    line-height: 116px;
+    background: linear-gradient(94.89deg, #001C1C -8.69%, #EA0F0F 50.68%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* text-fill-color: transparent; */
 }
 
-.App-link {
-  color: #61dafb;
+.thirdHeading {
+    position: absolute;
+    width: 216px;
+    height: 70px;
+    left: 83px;
+    top: 379px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: white;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subContainer {
+    justify-content: center;
+    position: absolute;
+    width: 925px;
+    height: 100%;
+    left: 440px;
+    top: 0px;
+    background: #DC143C;
+    border-radius: 33px 0px 0px 33px;
 }
+
+.subFirstHeading {
+    position: absolute;
+    width: 120px;
+    height: 21px;
+    left: 800px;
+    top: 30px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: white;
+}
+
+/* #triangle {
+    background: transparent;
+} */
+
+.triangle_img{
+    background: transparent;
+
+}
+
+.subSecondHeading {
+    position: absolute;
+    width: 350px;
+    height: 38px;
+    left: 245px;
+    top: 103px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: black;
+}
+
+
+
+
+.google {
+    /* block of inside */
+    position: absolute;
+    width: 200px;
+    height: 45px;
+    left: 246px;
+    top: 164px;
+
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 9px;
+}
+
+.googleParagraph {
+    position: absolute;
+    cursor: pointer;
+    width: 120px;
+    height: 18px;
+    left: 46px;
+    top: 12px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+}
+
+.logo_google {
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 6px;
+    top: 7px;
+}
+
+.logo_facebook{
+    width: 25px;
+    height: 25px;
+    left: 6px;
+    top: 6px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.facebook {
+    position: absolute;
+    width: 200px;
+    height: 45px;
+    left: 432px;
+    top: 163px;
+    margin-left: 30px;
+
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 9px;
+}
+
+.facebookParagraph {
+    position: absolute;
+    cursor: pointer;
+    width: 140px;
+    height: 18px;
+    left: 40px;
+    top: 12px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px; 
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
+
+
+
+#or {
+    position: absolute;
+    width: 55px;
+    height: 27px;
+    left: 433px;
+    top: 250px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+
+    display: flex;
+    align-items: center;
+
+    color: #FFF7F7;
+}
+
+.subThirdContainer {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 9px 126px;
+    gap: 10px;
+    margin-top: 15px;
+
+    position: absolute;
+    width: 389px;
+    height: 44px;
+    left: 250px;
+    top: 470px;
+
+    background: #000000;
+    border-radius: 9px;
+}
+
+.subThirdHeading {
+    cursor: pointer;
+    /* inside the account */
+    width: 137px;
+    height: 26px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+
+
+
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+.subFourthHeading {
+    position: absolute;
+    width: 251px;
+    height: 23px;
+    left: 254px;
+    top: 530px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+
+    color: #FFF7F7;
+    margin-top: 10px;
+}
+
+span {
+    color: black;
+}
+.sign_up_pointer, .sign_up_pointer{
+    cursor: pointer;
+}
+
+.FormHeading {
+
+    /* inside the block */
+    position: absolute;
+    width: 25px;
+    height: 23px;
+    left: 251px;
+    top: 300px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    align-items: center;
+    color: #FFF7F7;
+
+}
+
+.fullName,
+.emailAdd,
+.passWord {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding: 5px;
+    outline: none;
+    width: 385px;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+#togglePassword{
+    cursor: pointer;
+    position: absolute;
+    bottom: -70px;
+    left: 365px;
+    
+}
+
